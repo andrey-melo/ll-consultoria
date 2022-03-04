@@ -36,9 +36,11 @@ export default {
       if(window.scrollY >= 120){
         let nav = document.getElementById("menu-fixo");
         nav.classList.add("fixed");
+       
       }else{
         let nav = document.getElementById("menu-fixo");
         nav.classList.remove("fixed");
+   
       }
     },
   },
@@ -54,6 +56,15 @@ export default {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+.container{
+  margin : auto;
+  max-width: 1170px !important;
+  padding:0 15px;
+}
+
+body{
+  padding-top: 120px;
 }
 
 </style>

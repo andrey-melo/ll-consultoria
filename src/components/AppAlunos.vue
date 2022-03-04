@@ -1,26 +1,28 @@
 <template>
-  <section class="bg-darkslateblue">
-    <h1 class="text-center text-white text-5xl py-3">Antes e depois</h1>
-    <div id="conjunto-banners" class=" flex justify-around items-center py-10">
-      <div>
-        <div id="banner1" class="rotativo">
-          <img class="selected" src="../../imagens-alunos/1.jpg" alt="" />
-          <img src="../../imagens-alunos/2.jpg" alt="" />
-          <img src="../../imagens-alunos/3.jpg" alt="" />
+  <section class="bg-golden">
+    <div class="container">
+      <h1 class="text-center text-white text-5xl py-3">Antes e depois</h1>
+      <div id="conjunto-banners" class=" flex justify-between items-center py-10">
+        <div>
+          <div id="banner1" class="rotativo">
+            <img class="selected" src="../../imagens-alunos/1.jpg" alt="" />
+            <img src="../../imagens-alunos/2.jpg" alt="" />
+            <img src="../../imagens-alunos/3.jpg" alt="" />
+          </div>
         </div>
-      </div>
-      <div>
-        <div id="banner2" class="rotativo">
-          <img class="selected" src="../../imagens-alunos/4.jpg" alt="" />
-          <img src="../../imagens-alunos/5.jpg" alt="" />
-          <img src="../../imagens-alunos/6.jpg" alt="" />
+        <div>
+          <div id="banner2" class="rotativo">
+            <img class="selected" src="../../imagens-alunos/4.jpg" alt="" />
+            <img src="../../imagens-alunos/5.jpg" alt="" />
+            <img src="../../imagens-alunos/6.jpg" alt="" />
+          </div>
         </div>
-      </div>
-      <div>
-        <div id="banner3" class="rotativo">
-          <img class="selected" src="../../imagens-alunos/7.jpg" alt="" />
-          <img src="../../imagens-alunos/8.jpg" alt="" />
-          <img src="../../imagens-alunos/9.jpg" alt="" />
+        <div>
+          <div id="banner3" class="rotativo">
+            <img class="selected" src="../../imagens-alunos/7.jpg" alt="" />
+            <img src="../../imagens-alunos/8.jpg" alt="" />
+            <img src="../../imagens-alunos/9.jpg" alt="" />
+          </div>
         </div>
       </div>
     </div>
@@ -112,7 +114,7 @@ export default {
 <style>
 #banner1, #banner2, #banner3 {
   position: relative;
-  z-index: 1000;
+  z-index: 5;
   width: 300px;
   height: 300px;
   

@@ -1,38 +1,111 @@
 <template>
-  <section class="bg-golden px-5 py-10 flex justify-around">
-      <div
-        id="card-presencial"
-        class="bg-white w-1/3 h-card-planos hover:scale-105"
-      >
-        <div class="bg-yellowgreen p-3">
-          <h1 class="text-center font-semibold text-xl">
-            Consultoria Presencial
-          </h1>
+  <div class="bg-img-aluno bg-center bg-no-repeat bg-cover">
+    <div class="container">
+      <h1 class="text-white text-center text-4xl pt-10">Planos de treino</h1>
+      <h2 class="text-white text-center text-2xl py-3">
+        <span class="bg-locura43 p-2">Com o planejamento bem elaborado,&nbsp;<br />&nbsp;o objetivo é certo!</span>
+      </h2>
+      <section id="planos" class="pt-10 pb-10 flex justify-around">
+        <div
+          id="card-presencial"
+          class="bg-white w-1/3 shadow-black shadow-xl hover:scale-105 duration-500"
+        >
+          <div class="bg-yellowgreen p-3">
+            <h1 class="text-center font-semibold text-xl">
+              Consultoria Presencial
+            </h1>
+          </div>
+          <div class="px-7 py-1">
+            <p>
+              Acompanhamento de acordo com o seu objetivo, onde você receberá um
+              material completo de treinamento e dieta, além de conteúdo
+              explicativo de cada exercício de forma única para você.
+            </p>
+            <ul class="list-disc text-left py-3">
+              <li>Anamnese (informações necessárias para as prescrições</li>
+              <li>Perimetria (medidas e circunferência)</li>
+              <li>Percentual de gordura (avaliação e análise</li>
+              <li>Uma hora para tirar todas as suas dúvidas pessoalmente</li>
+              <li>Atendimento em consultório</li>
+            </ul>
+          </div>
+          <span class="block text-center m-auto text-5xl py-5">
+            <sup>R$ </sup>
+            <strong>{{ this.valorPresencial }}</strong>
+          </span>
+          <div>
+            <select
+              @change="mudarPlanoPresencial()"
+              class="border-2 border-black w-4/5 px-3 my-5 block m-auto py-px"
+              name="planoPresencial"
+              id="selectPresencial"
+            >
+              <option>Selecionar</option>
+              <option>Mensal</option>
+              <option>Bimestral</option>
+              <option>Trimestral</option>
+              <option>Semestral</option>
+              <option>Anual</option>
+              <option>Mensal - Treino ou Dieta</option>
+              <option>Bimestral - Treino ou Dieta</option>
+              <option>Trimestral - Treino ou Dieta</option>
+              <option>Semestral - Treino ou Dieta</option>
+              <option>Anual - Treino ou Dieta</option>
+            </select>
+            <button
+              class="
+                block
+                w-4/5
+                my-3
+                mt-auto
+                m-auto
+                uppercase
+                shadow
+                bg-darkslateblue
+                hover:bg-blue-700
+                focus:shadow-outline focus:outline-none
+                text-white text-xs
+                py-3
+                px-10
+                rounded
+              "
+            >
+              Quero contratar!
+            </button>
+          </div>
         </div>
-        <div class="px-7 py-1">
-          <p>
-            Acompanhamento de acordo com o seu objetivo, onde você receberá um
-            material completo de treinamento e dieta, além de conteúdo explicativo
-            de cada exercício de forma única para você.
-          </p>
-          <ul class="list-disc text-left py-3">
-            <li>Anamnese (informações necessárias para as prescrições</li>
-            <li>Perimetria (medidas e circunferência)</li>
-            <li>Percentual de gordura (avaliação e análise</li>
-            <li>Uma hora para tirar todas as suas dúvidas pessoalmente</li>
-            <li>Atendimento em consultório</li>
-          </ul>
-        </div>
-        <span class="block text-center m-auto text-5xl">
-          <sup>R$ </sup>
-          <strong class="ml-1">{{ this.valorPresencial }}</strong>
-        </span>
-        <div>
+        <div
+          id="card-online"
+          class="bg-white w-1/3 shadow-black shadow-xl hover:scale-105 duration-500"
+        >
+          <div class="bg-yellowgreen p-3">
+            <h1 class="text-center font-semibold text-xl">
+              Consultoria Online
+            </h1>
+          </div>
+          <div class="px-7 py-1">
+            <p>
+              Acompanhamento de acordo com o seu objetivo, onde você receberá um
+              material completo de treinamento e dieta, além de conteúdo
+              explicativo de cada exercício de forma única para você.
+            </p>
+            <ul class="list-disc text-left py-3">
+              <li>Anamnese (informações necessárias para as prescrições</li>
+              <li>Perimetria (medidas e circunferência)</li>
+              <li>Percentual de gordura (avaliação e análise</li>
+              <li>Uma hora para tirar todas as suas dúvidas pessoalmente</li>
+              <li>Atendimento em consultório</li>
+            </ul>
+          </div>
+          <span class="block text-center m-auto text-5xl py-5">
+            <sup>R$ </sup>
+            <strong class="ml-1">{{ this.valorOnline }}</strong>
+          </span>
           <select
-            @change="mudarPlanoPresencial()"
-            class="border-2 border-black w-4/5 px-3 my-5 block m-auto py-px"
-            name="planoPresencial"
-            id="selectPresencial"
+            @change="mudarPlanoOnline()"
+            class="border-2 border-black my-5 w-4/5 px-3 block m-auto py-px"
+            name="planoOnline"
+            id="selectOnline"
           >
             <option>Selecionar</option>
             <option>Mensal</option>
@@ -46,69 +119,7 @@
             <option>Semestral - Treino ou Dieta</option>
             <option>Anual - Treino ou Dieta</option>
           </select>
-          <button
-            class="
-              block
-              w-4/5
-              my-3
-              mt-auto
-              m-auto
-              uppercase
-              shadow
-              bg-darkslateblue
-              hover:bg-blue-700
-              focus:shadow-outline focus:outline-none
-              text-white text-xs
-              py-3
-              px-10
-              rounded
-            "
-          >
-            Quero contratar!
-          </button>
-        </div>
-      </div>
-      <div id="card-online" class="bg-white w-1/3 h-card-planos hover:scale-105 ">
-        <div class="bg-yellowgreen p-3">
-          <h1 class="text-center font-semibold text-xl">Consultoria Online</h1>
-        </div>
-        <div class="px-7 py-1">
-          <p>
-            Acompanhamento de acordo com o seu objetivo, onde você receberá um
-            material completo de treinamento e dieta, além de conteúdo explicativo
-            de cada exercício de forma única para você.
-          </p>
-          <ul class="list-disc text-left py-3">
-            <li>Anamnese (informações necessárias para as prescrições</li>
-            <li>Perimetria (medidas e circunferência)</li>
-            <li>Percentual de gordura (avaliação e análise</li>
-            <li>Uma hora para tirar todas as suas dúvidas pessoalmente</li>
-            <li>Atendimento em consultório</li>
-          </ul>
-        </div>
-        <span class="block text-center m-auto text-5xl">
-          <sup>R$ </sup>
-          <strong class="ml-1">{{ this.valorOnline }}</strong>
-        </span>
-        <select
-          @change="mudarPlanoOnline()"
-          class="border-2 border-black my-5 w-4/5 px-3 block m-auto py-px"
-          name="planoOnline"
-          id="selectOnline"
-        >
-          <option>Selecionar</option>
-          <option>Mensal</option>
-          <option>Bimestral</option>
-          <option>Trimestral</option>
-          <option>Semestral</option>
-          <option>Anual</option>
-          <option>Mensal - Treino ou Dieta</option>
-          <option>Bimestral - Treino ou Dieta</option>
-          <option>Trimestral - Treino ou Dieta</option>
-          <option>Semestral - Treino ou Dieta</option>
-          <option>Anual - Treino ou Dieta</option>
-        </select>
-        
+
           <router-link to="consultoriaonline">
             <button
               class="
@@ -131,9 +142,10 @@
               Quero contratar!
             </button>
           </router-link>
-      </div>
-    
-  </section>
+        </div>
+      </section>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -220,22 +232,27 @@ export default {
 </script>
 
 <style>
-@media (max-width: 1040px) {
-  #planos {
-    flex-direction: column;
-    gap: 40px;
-    width: 100%;
-    align-items: center;
-  }
-  #card-presencial,
-  #card-online {
-    width: 450px;
+@media (max-width: 869px) {
+  #card-online,
+  #card-presencial{
+    width: 40%;
   }
 }
-@media (max-width: 639px) {
-  #card-presencial,
-  #card-online {
-    width: 280px;
+@media (max-width: 689px) {
+  #planos {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+  #card-online,
+  #card-presencial {
+    width: 70%;
+  }
+}
+@media (max-width: 400px) {
+  #card-online,
+  #card-presencial {
+    width: 90%;
   }
 }
 </style>

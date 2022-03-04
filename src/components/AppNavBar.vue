@@ -50,70 +50,22 @@
   </div>
 
   <header class="header" id="menu-fixo">
-    <div class="container">  
+    <div class="container">
       <div class="header-block flex items-center justify-between py-2">
         <div class="w-40">
-          <img class="w-full" src="../../imagens/consultoria-menu.png" alt="Logo" />
+          <img
+            class="w-full"
+            src="../../imagens/consultoria-menu.png"
+            alt="Logo"
+          />
         </div>
 
         <nav id="nav-menu" class="flex items-center justify-end">
           <ul id="links-menu" class="flex w-full justify-between">
-            
-              <li class="
-                  p-3
-                ">
-                <a href="#home" class="tracking-widest
-                  p-3
-                  text-center
-                  font-firasans font-semibold
-                  hover:bg-darkslateblue
-                  rounded-md
-                  hover:text-white
-                  cursor-pointer">Home</a>
-              </li>
-              <li class="p-3">
-                <a href="#planos" class="tracking-widest
-                  p-3
-                  text-center
-                  font-firasans font-semibold
-                  hover:bg-darkslateblue
-                  rounded-md
-                  hover:text-white
-                  cursor-pointer">Planos</a>
-              </li>
-            
-              <li class="
-                  p-3
-                  "
-              >
-                <a href="#bio" class=" tracking-widest
-                  p-3
-                  text-center
-                  font-firasans font-semibold
-                  hover:bg-darkslateblue
-                  rounded-md
-                  hover:text-white
-                  cursor-pointer">Bio</a>
-              </li>
-            
-              <li
-                class="p-3"
-              >
-                <a href="#alunos" class="
-                  tracking-widest
-                  p-3
-                  text-center
-                  font-firasans font-semibold
-                  hover:bg-darkslateblue
-                  rounded-md
-                  hover:text-white
-                  cursor-pointer">Alunos</a>
-              </li>
-           
-            
-              <li
-                class="p-3">
-                <a href="#contato" class="
+            <li class="p-3">
+              <a
+                href="#home"
+                class="
                   tracking-widest
                   p-3
                   text-center
@@ -122,16 +74,88 @@
                   rounded-md
                   hover:text-white
                   cursor-pointer
-                ">Contato</a>
-              </li>
+                "
+                >Home</a
+              >
+            </li>
+            <li class="p-3">
+              <a
+                href="#planos"
+                class="
+                  tracking-widest
+                  p-3
+                  text-center
+                  font-firasans font-semibold
+                  hover:bg-darkslateblue
+                  rounded-md
+                  hover:text-white
+                  cursor-pointer
+                "
+                >Planos</a
+              >
+            </li>
+
+            <li class="p-3">
+              <a
+                href="#bio"
+                class="
+                  tracking-widest
+                  p-3
+                  text-center
+                  font-firasans font-semibold
+                  hover:bg-darkslateblue
+                  rounded-md
+                  hover:text-white
+                  cursor-pointer
+                "
+                >Bio</a
+              >
+            </li>
+
+            <li class="p-3">
+              <a
+                href="#alunos"
+                class="
+                  tracking-widest
+                  p-3
+                  text-center
+                  font-firasans font-semibold
+                  hover:bg-darkslateblue
+                  rounded-md
+                  hover:text-white
+                  cursor-pointer
+                "
+                >Alunos</a
+              >
+            </li>
+
+            <li class="p-3">
+              <a
+                href="#contato"
+                class="
+                  tracking-widest
+                  p-3
+                  text-center
+                  font-firasans font-semibold
+                  hover:bg-darkslateblue
+                  rounded-md
+                  hover:text-white
+                  cursor-pointer
+                "
+                >Contato</a
+              >
+            </li>
           </ul>
-          <button @click="ativaMenu()" class="flex py-2 px-4 text-xl items-center">
+          <button
+            @click="ativaMenu()"
+            class="flex py-2 px-4 text-xl items-center"
+          >
             Menu&nbsp;
             <span id="mobile-menu"></span>
           </button>
         </nav>
       </div>
-    </div>  
+    </div>
   </header>
 </template>
 
@@ -147,33 +171,22 @@ export default {
 </script>
 
 <style>
-
-.container{
-  margin : auto;
-  max-width: 1170px !important;
-  padding:0 15px;
-}
-
-body{
-  padding-top: 120px;
-}
-
-.bar-topo{
+.bar-topo {
   position: absolute;
   top: 0;
-  left:0;
+  left: 0;
   right: 0;
   width: 100%;
 }
 
-.header{
+.header {
   position: absolute;
-  top :40px;
-  left:0;
+  top: 40px;
+  left: 0;
   right: 0;
   width: 100%;
-  transition: top ease-in-out .2s;
-  margin:auto;
+  transition: top ease-in-out 0.2s;
+  margin: auto;
   background-color: #fff;
 }
 
@@ -182,7 +195,7 @@ body{
   width: 87%;
   border-radius: 20px;
   top: 15px;
-  box-shadow:0px 4px 10px rgb(130 130 130 / 25%);
+  box-shadow: 0px 4px 10px rgb(130 130 130 / 25%);
 }
 
 #menu-fixo.fixed img {
@@ -192,9 +205,10 @@ body{
   width: 100%;
   top: 0px;
 }
-#menu-fixo.fixed #links-menu {
+#menu-fixo.fixed #links-menu, #menu-fixo #links-menu {
   top: 50px;
 }
+
 
 #nav-menu button {
   display: none;
@@ -226,13 +240,7 @@ body{
   transform: rotate(-135deg);
   top: -7px;
 }
-@media (max-width: 400px) {
-  #menu-fixo #links-menu {
-    top: 150px;
-    height: 60vh;
-    width: 60%;
-  }
-}
+
 @media (max-width: 999px) {
   #nav-menu button {
     display: flex;
@@ -247,7 +255,7 @@ body{
     right: 0px;
     border-radius: 0px 0px 10px 10px;
     background-color: #fff;
-    height: 56vh;
+    text-align: center;
   }
 
   #nav-menu.ativo li {
@@ -258,6 +266,13 @@ body{
 
   #nav-menu ul {
     display: none;
+  }
+}
+@media (max-width: 400px) {
+  #menu-fixo #links-menu {
+    top: 150px;
+
+    width: 60%;
   }
 }
 </style>
