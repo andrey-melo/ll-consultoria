@@ -1,16 +1,16 @@
 <template>
-  <div class="bg-img-aluno bg-center bg-no-repeat bg-cover">
+  <div class="bg-cor-3">
     <div class="container">
       <h1 class="text-white text-center text-4xl pt-10">Planos de treino</h1>
       <h2 class="text-white text-center text-2xl py-3">
-        <span class="bg-locura43 p-2">Com o planejamento bem elaborado,&nbsp;<br />&nbsp;o objetivo é certo!</span>
+        <span class="bg-cor-4 p-2">Com o planejamento bem elaborado,&nbsp;<br />&nbsp;o objetivo é certo!</span>
       </h2>
       <section id="planos" class="pt-10 pb-10 flex justify-around">
         <div
           id="card-presencial"
           class="bg-white w-1/3 shadow-black shadow-xl hover:scale-105 duration-500"
         >
-          <div class="bg-yellowgreen p-3">
+          <div class="bg-cor-2 p-3">
             <h1 class="text-center font-semibold text-xl">
               Consultoria Presencial
             </h1>
@@ -61,12 +61,12 @@
                 m-auto
                 uppercase
                 shadow
-                bg-darkslateblue
+                bg-cor-1
                 hover:bg-blue-700
-                focus:shadow-outline focus:outline-none
-                text-white text-xs
                 py-3
                 px-10
+                focus:shadow-outline focus:outline-none
+                text-white text-xs
                 rounded
               "
             >
@@ -78,7 +78,7 @@
           id="card-online"
           class="bg-white w-1/3 shadow-black shadow-xl hover:scale-105 duration-500"
         >
-          <div class="bg-yellowgreen p-3">
+          <div class="bg-cor-2 p-3">
             <h1 class="text-center font-semibold text-xl">
               Consultoria Online
             </h1>
@@ -130,7 +130,7 @@
                 m-auto
                 uppercase
                 shadow
-                bg-darkslateblue
+                bg-cor-1
                 hover:bg-blue-700
                 focus:shadow-outline focus:outline-none
                 text-white text-xs

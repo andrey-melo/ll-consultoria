@@ -1,23 +1,23 @@
 <template>
-  <section class="bg-golden">
+  <section class="bg-img-aluno bg-center bg-no-repeat bg-cover">
     <div class="container">
       <h1 class="text-center text-white text-5xl py-3">Antes e depois</h1>
       <div id="conjunto-banners" class=" flex justify-between items-center py-10">
-        <div>
+        <div class="flex-banner1">
           <div id="banner1" class="rotativo">
             <img class="selected" src="../../imagens-alunos/1.jpg" alt="" />
             <img src="../../imagens-alunos/2.jpg" alt="" />
             <img src="../../imagens-alunos/3.jpg" alt="" />
           </div>
         </div>
-        <div>
+        <div class="flex-banner2">
           <div id="banner2" class="rotativo">
             <img class="selected" src="../../imagens-alunos/4.jpg" alt="" />
             <img src="../../imagens-alunos/5.jpg" alt="" />
             <img src="../../imagens-alunos/6.jpg" alt="" />
           </div>
         </div>
-        <div>
+        <div class="flex-banner3">
           <div id="banner3" class="rotativo">
             <img class="selected" src="../../imagens-alunos/7.jpg" alt="" />
             <img src="../../imagens-alunos/8.jpg" alt="" />
@@ -112,12 +112,12 @@ export default {
 </script>
 
 <style>
+
 #banner1, #banner2, #banner3 {
   position: relative;
   z-index: 5;
   width: 300px;
   height: 300px;
-  
 }
 #banner1 img, #banner2 img, #banner3 img {
   opacity: 0;
@@ -139,10 +139,27 @@ export default {
   opacity: 1;
   object-fit: cover;
 }
-@media (max-width: 321px) {
+@media (max-width: 1020px) {
+  #conjunto-banners{
+    flex-direction: column;
+    gap: 30px;
+  }
+  .flex-banner1{
+    align-self: flex-start;
+  }
+  .flex-banner3{
+    align-self: flex-end;
+  }
+  
+}
+@media (max-width: 400px) {
   #conjunto-banners{
     flex-direction: column;
     gap:30px;
+  }
+  .flex-banner1, .flex-banner3{
+    align-self: center;
+    
   }
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-slate-100">
+  <section class="bg-'slate-1'00">
     <div class="container">
       <h1 class="text-center text-5xl py-5">Quem sou eu?</h1>
       <div id="conteudo-bio" class="flex w-full m-auto text-center py-14">

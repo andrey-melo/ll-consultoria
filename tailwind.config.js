@@ -6,12 +6,11 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                'darkslateblue': '#00397d',
-                'yellowgreen': '#a4cc37 ',
-                'light-g-yellow': '#e6f4c1',
-                'locura43': '#638016',
-                'locura': '#966C05',
-                'golden': '#09173B',
+                'cor-1': '#00397d',
+                'cor-2': '#a4cc37 ',
+                'cor-3': '#09173B',
+                'cor-4': '#638016',
+
             },
 
             fontFamily: {

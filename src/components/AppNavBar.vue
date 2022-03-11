@@ -1,5 +1,5 @@
 <template>
-  <div id="home" class="bar-topo bg-golden">
+  <div id="home" class="bar-topo bg-cor-3">
     <div class="container">
       <div class="bar-topo-block flex items-center w-full justify-between">
         <span class="text-sm text-white hover:text-blue-600 tracking-widest"
@@ -70,7 +70,7 @@
                   p-3
                   text-center
                   font-firasans font-semibold
-                  hover:bg-darkslateblue
+                  hover:bg-cor-1
                   rounded-md
                   hover:text-white
                   cursor-pointer
@@ -86,7 +86,7 @@
                   p-3
                   text-center
                   font-firasans font-semibold
-                  hover:bg-darkslateblue
+                  hover:bg-cor-1
                   rounded-md
                   hover:text-white
                   cursor-pointer
@@ -103,7 +103,7 @@
                   p-3
                   text-center
                   font-firasans font-semibold
-                  hover:bg-darkslateblue
+                  hover:bg-cor-1
                   rounded-md
                   hover:text-white
                   cursor-pointer
@@ -120,7 +120,7 @@
                   p-3
                   text-center
                   font-firasans font-semibold
-                  hover:bg-darkslateblue
+                  hover:bg-cor-1
                   rounded-md
                   hover:text-white
                   cursor-pointer
@@ -137,7 +137,7 @@
                   p-3
                   text-center
                   font-firasans font-semibold
-                  hover:bg-darkslateblue
+                  hover:bg-cor-1
                   rounded-md
                   hover:text-white
                   cursor-pointer
@@ -269,10 +269,12 @@ export default {
   }
 }
 @media (max-width: 400px) {
-  #menu-fixo #links-menu {
-    top: 150px;
-
+  #menu-fixo.fixed #links-menu {
+    top: 42px;
     width: 60%;
+  }
+  #menu-fixo.fixed li{
+    width: 100%;
   }
 }
 </style>

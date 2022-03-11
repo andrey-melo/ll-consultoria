@@ -21,12 +21,16 @@
           absolute
           left-20
           bottom-5
-          text-black
-          bg-yellowgreen
           px-20
           py-3
-          hover:text-black
-          font-bold
+          font-semibold
+          tracking-widest
+          text-black text-lg
+          border-b-4 border-cor-2
+          rounded-md
+          bg-cor-2
+          hover:bg-cor-4
+          hover:text-white
         "
       >
         Saber mais!
@@ -92,10 +96,12 @@ export default {};
     bottom: 20px;
     right: 20px;
   }
-  #whats-banner, #insta-banner, #btn-banner{
-     transition: 0.5s;
+  #whats-banner,
+  #insta-banner,
+  #btn-banner {
+    transition: 0.5s;
   }
-  #btn-banner{
+  #btn-banner {
     padding: 15px 70px 15px 70px;
   }
 }
@@ -122,31 +128,30 @@ export default {};
     white-space: nowrap;
     overflow: hidden;
   }
-  #btn-banner{
+  #btn-banner {
     left: 30px;
     padding: 10px 40px 10px 40px;
   }
 }
-  @media (max-width: 400px) {
-    #texto-banner{
-        left: 20px;
-        top: 25px;
-        width: 200px;
-        font-size: 30px;
-    }
-    #whats-banner {
-      bottom: 5px;
-      right: 40px;
-    }
-    #insta-banner {
-      bottom: 5px;
-      right: 5px;
-    }
-    #btn-banner {
-      bottom: 5px;
-      left: 20px;
-      padding: 8px 30px 8px 30px;
-    }
+@media (max-width: 400px) {
+  #texto-banner {
+    left: 20px;
+    top: 25px;
+    width: 200px;
+    font-size: 30px;
   }
-
+  #whats-banner {
+    bottom: 5px;
+    right: 40px;
+  }
+  #insta-banner {
+    bottom: 5px;
+    right: 5px;
+  }
+  #btn-banner {
+    bottom: 5px;
+    left: 20px;
+    padding: 8px 30px 8px 30px;
+  }
+}
 </style>
