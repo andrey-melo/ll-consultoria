@@ -1,6 +1,6 @@
 <template>
   <section class="bg-img-aluno bg-center bg-no-repeat bg-cover">
-    <div class="container">
+    <div class="container py-20">
       <h1 class="text-center text-white text-5xl py-3">Antes e depois</h1>
       <div id="conjunto-banners" class=" flex justify-between items-center py-10">
         <div class="flex-banner1">
@@ -68,7 +68,7 @@ export default {
       }
 
       imagem[this.imagemAtual1].classList.add("selected")
-      console.log(imagem)
+      
     },
     proximaImagem2() {
       let imagem = document.querySelectorAll("#banner2 img")
@@ -84,7 +84,7 @@ export default {
       }
 
       imagem[this.imagemAtual2].classList.add("selected")
-      console.log(imagem)
+
     },
     proximaImagem3() {
       let imagem = document.querySelectorAll("#banner3 img")
@@ -100,7 +100,7 @@ export default {
       }
 
       imagem[this.imagemAtual3].classList.add("selected")
-      console.log(imagem)
+
     },
   },
   mounted() {

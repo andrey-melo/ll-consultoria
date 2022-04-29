@@ -1,45 +1,36 @@
 <template>
   <section>
-    <div class="relative w-full">
-      <div
-        id="area-fale-conosco"
-        class="
-          w-full
-          mx-auto
-          py-40
-          bg-contato-banner bg-center bg-no-repeat bg-cover
-        "
-      >
-        <div class="container">
-          <p
-            id="text-fale-conosco"
-            class="absolute text-white text-5xl right-20 top-8 z-10"
-          >
-            Alguma dúvida? Estamos aqui! Entre em contato conosco!
-          </p>
-          <button
-            id="btn-fale-conosco"
-            class="
-              absolute
-              right-0
-              left-0
-              bottom-5
-              block
-              w-60
-              m-auto
-              py-2
-              font-semibold
-              tracking-widest
-              text-black text-lg
-              border-b-4 border-cor-2
-              rounded-md
-              bg-cor-2
-              hover:bg-cor-4 hover:text-white
-            "
-          >
-            <a href="">Fale conosco</a>
-          </button>
-        </div>
+    <div
+      id="area-fale-conosco"
+      class="
+        w-full
+        mx-auto
+        bg-contato-banner bg-center bg-no-repeat bg-cover
+        p-10
+      "
+    >
+      <div class="container">
+        <p id="text-fale-conosco" class="text-white text-5xl">
+          Alguma dúvida? Estamos aqui! Entre em contato conosco!
+        </p>
+        <button
+          id="btn-fale-conosco"
+          class="
+            block
+            w-60
+            m-auto
+            py-2
+            font-semibold
+            tracking-widest
+            text-white text-lg
+            border-b-4 border-cor-4
+            rounded-md
+            bg-cor-4
+            hover:bg-cor-2 hover:text-black
+          "
+        >
+          <a class="flex justify-center" href=""> Fale conosco</a>
+        </button>
       </div>
     </div>
   </section>
@@ -51,7 +42,12 @@ export default {};
 
 <style>
 #text-fale-conosco {
-  max-width: 500px;
+  max-width: 800px;
+  height: 300px;
+  width: 100%;
+  display: block;
+  text-align: center;
+  margin: auto;
 }
 @media (max-width: 669px) {
   #text-fale-conosco {

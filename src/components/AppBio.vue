@@ -1,32 +1,47 @@
 <template>
-  <section class="bg-'slate-1'00">
-    <div class="container">
-      <h1 class="text-center text-5xl py-5">Quem sou eu?</h1>
-      <div id="conteudo-bio" class="flex w-full m-auto text-center py-14">
-        <div id="foto-bio" class="w-1/3 mx-auto">
-          <img
-            class="w-full"
-            src="../../imagens/bio.jpg"
-            alt="Foto Lucas Louveira"
-          />
-        </div>
-        <div id="texto-bio" class="w-1/2">
-          <p class="text-center m-auto mt-10 text-xl p-5">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem nemo,
-            molestiae quod pariatur voluptatibus alias, accusamus ipsum vero
-            aliquam optio, illum minima assumenda officiis corporis quas illo.
-            Dolorem, blanditiis deserunt. Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Nam eaque aliquid veniam praesentium facilis
-            obcaecati deleniti recusandae assumenda quisquam.
-          </p>
-          <p class="text-center m-auto mt-10 text-xl p-5">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-            nostrum iure nesciunt commodi aperiam itaque, aspernatur voluptates
-            eum doloribus assumenda provident fugit? Perferendis officia magnam
-            possimus totam error magni tenetur.
-          </p>
-        </div>
+  <section class="">
+      <div id="faixa-bio" class=" py-16 bg-cor-2">
+            <div class="container">
+              <p class="text-5xl text-right 
+              ">Quem sou eu?</p>
+            </div>
       </div>
+    <div class="container">
+      
+        <div id="conteudo-bio" class="">
+          <div id="foto-bio" class="inline-block w-1/2 mx-auto">
+        
+              <img
+                class=" m-auto w-3/4 rounded-b-full relative -top-44 object-cover"
+                src="../../imagens/bio.jpg"
+                alt="Foto Lucas Louveira"
+              />
+            
+          </div>
+          <div id="texto-bio" class="inline-block align-top w-1/2 p-5">
+            <ul class=" flex flex-col gap-5 text-lg py-5">
+              <li>
+                Graduado em educação física UNIGRAN CAPITAL; 
+              </li>
+              <li>
+                Especializado em preparação de bodybuilders pela UNIGUAÇU;
+              </li>
+              <li>
+                Graduando nutrição pela CLARENTIANO;
+              </li>
+              <li>
+                Mais de 20mil atendimentos no Brasil;
+              </li>
+              <li>
+                Referência em consultoria presencial e online com experiência em atendimento clinico em consultório a mais de 7 anos;
+              </li>
+              <li>
+                Praticante de musculação com mais de 10 anos de experiência;
+              </li>
+            </ul>
+          </div>
+            
+        </div>
     </div>
   </section>
 </template>
@@ -36,6 +51,38 @@ export default {};
 </script>
 
 <style>
+#foto-bio{
+  max-height: 500px;
+  height: 100%;
+}
+#texto-bio p{
+  letter-spacing: 0.5px;
+}
+@media(max-width: 800px){
+    #foto-bio img{
+      top:0;
+      border-radius: 0px;
+    }
+    #faixa-bio{
+      padding: 40px;
+    }
+    
+  }
+@media(max-width: 669px){
+  #faixa-bio p{
+    text-align: center;
+   margin: 0px;
+  }
+  #texto-bio{
+    width: 100%;
+    display: block;
+  }
+  #foto-bio{
+    width: 80%;
+    display: block;
+    margin: auto;
+  }
+}
 @media (max-width: 400px) {
   #conteudo-bio{
     flex-direction: column;
@@ -46,8 +93,7 @@ export default {};
     width: 100%;
   }
   #foto-bio{
-    width: 70%;
-    margin-top: -20px;
+   width: 100%;
   }
 }
 </style>

@@ -19,6 +19,10 @@ module.exports = {
             width: {
 
             },
+            height: {
+                '600': '600px',
+                '400': '400px',
+            },
             margin: {
                 '30%': '30%',
                 '20%': '20%',
@@ -26,6 +30,7 @@ module.exports = {
             backgroundImage: {
                 'contato-banner': "url('./imagens/fale-conosco.jpg')",
                 'img-aluno': "url('./imagens-alunos/bg-alunos.jpg')",
+                'img-banner': "url('./imagens/bannerzeiro-pq2.jpg')",
             },
         },
     },

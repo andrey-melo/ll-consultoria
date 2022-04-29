@@ -1,159 +1,107 @@
 <template>
-  <div id="home" class="bar-topo bg-cor-3">
-    <div class="container">
-      <div class="bar-topo-block flex items-center w-full justify-between">
-        <span class="text-sm text-white hover:text-blue-600 tracking-widest"
-          ><a href="mailto:lucaslouveira83@gmail.com">Contato</a></span
-        >
-
-        <div class="flex">
-          <div class="p-2 w-10 cursor-pointer">
-            <a
-              target="_blank"
-              rel="external"
-              href="https://api.whatsapp.com/send?1=pt_BR&phone=556793291928"
-            >
-              <img
-                src="../../imagens-contato/contato-whats.png"
-                alt="contato/whats"
-              />
-            </a>
+  <header class="header">
+    <div class="menu-bar" id="menu-fixo">
+      <div class="container">
+        <div class="header-block flex items-center justify-between py-2">
+          <div class="w-40">
+            <img
+              class="w-full"
+              src="../../imagens/consultoria-menu.png"
+              alt="Logo"
+            />
           </div>
-
-          <div class="p-2 w-10 cursor-pointer">
-            <a
-              target="_blank"
-              rel="external"
-              href="https://www.instagram.com/lucaslouveira/"
+          <nav id="nav-menu" class="flex items-center justify-end">
+            <ul id="links-menu" class="flex w-full justify-between">
+              <li class="p-3">
+                <a
+                  href="#home"
+                  class="
+                    tracking-widest
+                    p-3
+                    text-center
+                    font-firasans font-semibold
+                    hover:bg-cor-1
+                    rounded-md
+                    hover:text-white
+                    cursor-pointer
+                  "
+                  >Home</a
+                >
+              </li>
+              <li class="p-3">
+                <a
+                  href="#planos"
+                  class="
+                    tracking-widest
+                    p-3
+                    text-center
+                    font-firasans font-semibold
+                    hover:bg-cor-1
+                    rounded-md
+                    hover:text-white
+                    cursor-pointer
+                  "
+                  >Planos</a
+                >
+              </li>
+              <li class="p-3">
+                <a
+                  href="#bio"
+                  class="
+                    tracking-widest
+                    p-3
+                    text-center
+                    font-firasans font-semibold
+                    hover:bg-cor-1
+                    rounded-md
+                    hover:text-white
+                    cursor-pointer
+                  "
+                  >Bio</a
+                >
+              </li>
+              <li class="p-3">
+                <a
+                  href="#alunos"
+                  class="
+                    tracking-widest
+                    p-3
+                    text-center
+                    font-firasans font-semibold
+                    hover:bg-cor-1
+                    rounded-md
+                    hover:text-white
+                    cursor-pointer
+                  "
+                  >Alunos</a
+                >
+              </li>
+              <li class="p-3">
+                <a
+                  href="#contato"
+                  class="
+                    tracking-widest
+                    p-3
+                    text-center
+                    font-firasans font-semibold
+                    hover:bg-cor-1
+                    rounded-md
+                    hover:text-white
+                    cursor-pointer
+                  "
+                  >Contato</a
+                >
+              </li>
+            </ul>
+            <button
+              @click="ativaMenu()"
+              class="flex py-2 px-4 text-xl items-center"
             >
-              <img
-                src="../../imagens-contato/contato-instagram.png"
-                alt="contato/instagram"
-              />
-            </a>
-          </div>
-          <div class="p-2 w-10 cursor-pointer">
-            <a
-              target="_blank"
-              rel="external"
-              href="https://www.facebook.com/lucaslouveiraconsultoriaesportiva"
-            >
-              <img
-                src="../../imagens-contato/contato-facebook.png"
-                alt="contato/facebook"
-              />
-            </a>
-          </div>
+              Menu&nbsp;
+              <span id="mobile-menu"></span>
+            </button>
+          </nav>
         </div>
-      </div>
-    </div>
-  </div>
-
-  <header class="header" id="menu-fixo">
-    <div class="container">
-      <div class="header-block flex items-center justify-between py-2">
-        <div class="w-40">
-          <img
-            class="w-full"
-            src="../../imagens/consultoria-menu.png"
-            alt="Logo"
-          />
-        </div>
-
-        <nav id="nav-menu" class="flex items-center justify-end">
-          <ul id="links-menu" class="flex w-full justify-between">
-            <li class="p-3">
-              <a
-                href="#home"
-                class="
-                  tracking-widest
-                  p-3
-                  text-center
-                  font-firasans font-semibold
-                  hover:bg-cor-1
-                  rounded-md
-                  hover:text-white
-                  cursor-pointer
-                "
-                >Home</a
-              >
-            </li>
-            <li class="p-3">
-              <a
-                href="#planos"
-                class="
-                  tracking-widest
-                  p-3
-                  text-center
-                  font-firasans font-semibold
-                  hover:bg-cor-1
-                  rounded-md
-                  hover:text-white
-                  cursor-pointer
-                "
-                >Planos</a
-              >
-            </li>
-
-            <li class="p-3">
-              <a
-                href="#bio"
-                class="
-                  tracking-widest
-                  p-3
-                  text-center
-                  font-firasans font-semibold
-                  hover:bg-cor-1
-                  rounded-md
-                  hover:text-white
-                  cursor-pointer
-                "
-                >Bio</a
-              >
-            </li>
-
-            <li class="p-3">
-              <a
-                href="#alunos"
-                class="
-                  tracking-widest
-                  p-3
-                  text-center
-                  font-firasans font-semibold
-                  hover:bg-cor-1
-                  rounded-md
-                  hover:text-white
-                  cursor-pointer
-                "
-                >Alunos</a
-              >
-            </li>
-
-            <li class="p-3">
-              <a
-                href="#contato"
-                class="
-                  tracking-widest
-                  p-3
-                  text-center
-                  font-firasans font-semibold
-                  hover:bg-cor-1
-                  rounded-md
-                  hover:text-white
-                  cursor-pointer
-                "
-                >Contato</a
-              >
-            </li>
-          </ul>
-          <button
-            @click="ativaMenu()"
-            class="flex py-2 px-4 text-xl items-center"
-          >
-            Menu&nbsp;
-            <span id="mobile-menu"></span>
-          </button>
-        </nav>
       </div>
     </div>
   </header>
@@ -171,15 +119,10 @@ export default {
 </script>
 
 <style>
-.bar-topo {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
+.header{
+  padding-top:60px;
 }
-
-.header {
+.menu-bar {
   position: absolute;
   top: 40px;
   left: 0;
@@ -189,6 +132,8 @@ export default {
   margin: auto;
   background-color: #fff;
 }
+
+
 
 #menu-fixo.fixed {
   z-index: 10;
@@ -205,10 +150,10 @@ export default {
   width: 100%;
   top: 0px;
 }
-#menu-fixo.fixed #links-menu, #menu-fixo #links-menu {
+#menu-fixo.fixed #links-menu,
+#menu-fixo #links-menu {
   top: 50px;
 }
-
 
 #nav-menu button {
   display: none;
@@ -273,8 +218,13 @@ export default {
     top: 42px;
     width: 60%;
   }
-  #menu-fixo.fixed li{
+  #menu-fixo.fixed li {
     width: 100%;
+  }
+}
+@media(min-width: 1200px){
+  #menu-fixo.fixed{
+    width: 60%;
   }
 }
 </style>

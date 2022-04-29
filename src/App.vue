@@ -1,31 +1,23 @@
 <template>
 
 
+  <app-topo></app-topo>
   <app-nav-bar></app-nav-bar>
-  <router-view></router-view>
-  <app-banner ></app-banner>
-    
-  <app-planos id="planos"></app-planos>
-
-  <app-bio id="bio"></app-bio>
-
-  <app-alunos id="alunos"></app-alunos>
-
-  <app-fale-conosco id="contato"></app-fale-conosco>
-
+  <router-view></router-view> 
   <app-rodape id="rodape"></app-rodape>
 </template>
 
 <script>
+import AppTopo from "./components/AppTopo.vue";
 import AppNavBar from "./components/AppNavBar.vue";
 import AppRodape from "./components/AppRodape.vue";
 
 
 export default {
   components: {
+    AppTopo,
     AppNavBar,
     AppRodape,
- 
   },
   data() {
     return {
@@ -51,11 +43,16 @@ export default {
 </script>
 
 <style>
+
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;700&display=swap');
+
 * {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  transition: ease-in-out 0.2s;
 }
 .container{
   margin : auto;
@@ -63,8 +60,5 @@ export default {
   padding:0 15px;
 }
 
-body{
-  padding-top: 120px;
-}
 
 </style>

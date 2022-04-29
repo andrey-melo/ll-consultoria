@@ -25,12 +25,11 @@
           py-3
           font-semibold
           tracking-widest
-          text-black text-lg
-          border-b-4 border-cor-2
+          text-white text-lg
+          border-b-4 border-cor-4
           rounded-md
-          bg-cor-2
-          hover:bg-cor-4
-          hover:text-white
+          bg-cor-4
+          hover:bg-cor-2 hover:text-black
         "
       >
         Saber mais!
@@ -64,7 +63,7 @@
     <picture>
       <source
         media="(max-width: 669px)"
-        srcset="../../imagens/bannerzeiro-pq2.jpg"
+        srcset="../../imagens/bannerzeiro-pq.jpg"
       />
       <img
         class="object-cover w-full h-full"
@@ -82,6 +81,22 @@ export default {};
 <style>
 #texto-banner {
   text-shadow: 1px 1px 5px black;
+}
+
+picture {
+  overflow: hidden;
+  max-height: 500px;
+  display: block;
+}
+#whats-banner, #insta-banner{
+  font-weight: bold;
+  right: 20px;
+}
+#insta-banner{
+  bottom: 15px;
+}
+#whats-banner{
+  bottom: 50px;
 }
 @media (max-width: 859px) {
   #texto-banner {
@@ -137,8 +152,8 @@ export default {};
   #texto-banner {
     left: 20px;
     top: 25px;
-    width: 200px;
-    font-size: 30px;
+    width: 150px;
+    font-size: 25px;
   }
   #whats-banner {
     bottom: 5px;
@@ -151,7 +166,7 @@ export default {};
   #btn-banner {
     bottom: 5px;
     left: 20px;
-    padding: 8px 30px 8px 30px;
+    padding: 4px 15px 4px 15px;
   }
 }
 </style>

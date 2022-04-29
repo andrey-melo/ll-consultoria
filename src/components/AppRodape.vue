@@ -1,18 +1,18 @@
 <template>
   <footer class="bg-slate-200">
-    <div class="container">
-      <div
-        id="links-rodape"
-        class="flex justify-center gap-10 pt-10 pb-5 px-3 text-center"
-      >
-        <a href="#home">Home</a>
-        <a href="#planos">Planos</a>
-        <a href="#bio">Bio</a>
-        <a href="#alunos">Alunos</a>
-        <a href="#contato">Contato</a>
-      </div>
-      <div id="img-rodape" class="w-1/4 m-auto pb-5">
-        <img class="w-full" src="../../imagens/img-rodape.png" alt="" />
+    <div class="container pt-14 pb-10">
+      
+      <div id="links-rodape" class="flex flex-col gap-10 items-center flex-wrap">
+        <div class="flex gap-10 flex-wrap">
+          <a href="#home">Home</a>
+          <a href="#planos">Planos</a>
+          <a href="#bio">Bio</a>
+          <a href="#alunos">Alunos</a>
+          <a href="#contato">Contato</a>
+        </div>
+        <div id="img-rodape" class="w-1/2">
+          <img class="w-full" src="../../imagens/img-rodape.png" alt="" />
+        </div>
       </div>
     </div>
   </footer>
@@ -23,11 +23,8 @@ export default {};
 </script>
 
 <style>
-@media (max-width: 1170px) {
-  #img-rodape {
-    max-width: 250px;
-    min-width: 200px;
-  }
+#img-rodape{
+  max-width: 250px;
 }
 @media (max-width: 400px) {
   #links-rodape {
