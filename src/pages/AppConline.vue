@@ -8,20 +8,31 @@
     </h2>
   </div>
   <div class="container">
-    <div class="flex flex-col w-full flex-wrap h-[1000px] items-center justify-around">
+    <div
+      id="ajusta-tela-confirmacao"
+      class="
+        flex flex-col
+        w-full
+        flex-wrap
+        items-center
+        justify-around
+        h-[1000px]
+      "
+    >
       <div
-        id="card-online"
+        id="produto-presencial"
         class="
+          
           bg-white
           rounded-xl
           relative
           overflow-hidden
           border border-cor-1
           shadow-pricing
-          py-10
+          py-14
+          mt-10
           px-8
           w-1/2
-          mt-16
         "
       >
         <span
@@ -36,7 +47,8 @@
         >
           Consultoria Online
         </span>
-        <p class="text-base text-body-color pb-4">
+
+        <p class="text-base text-body-color pb-8">
           Você terá acesso a um questionário onde todas suas informações deverão
           ser preenchidas como: objetivo, idade, altura, lesões ou dores,
           experiência de treino, horas de sono, rotina alimentar. Todas essas
@@ -51,6 +63,7 @@
             Feita por meio de fotos e vídeos que serão enviadas por você no
             questionário de anamnese.</small
           >
+
           <p class="text-base mt-3 font-semibold">Treino e Acompanhamento</p>
           <small>
             Seu treino será enviado com toda estrutura de exercícios e aeróbios,
@@ -58,18 +71,9 @@
           </small>
         </div>
       </div>
-      <div class="w-1/2 pb-10 pt-10">
-        <h3 class="text-red-600 font-semibold">Atenção:</h3>
-        <ul class="flex flex-col gap-5">
-          <li>
-            Nesse módulo de consultoria você ganhará acesso ao questionário de
-            saúde para preencher, e todo seu atendimento será de forma 100%
-            online.
-          </li>
-          <li>
-            Após preencher o questionário irá receber todo seu material de
-            acordo com o módulo que escolheu, dentro de 5 dias úteis.
-          </li>
+      <div id="atencao-regras" class="pb-10 w-1/2 text-base ">
+        <h3 class="text-red-600 font-semibold py-3">Atenção:</h3>
+        <ul class="">
           <li>
             Será feita identificação de possíveis desequilíbrios musculares e
             através desses dados iremos elaborar um treino direcionado para
@@ -80,65 +84,105 @@
             todas feitas de segunda a sexta pelo WhatsApp de dúvidas, exclusivo
             para alunos com prazo de resposta de 24hs00.
           </li>
+          <li>
+            Nesse módulo de consultoria você ganhará acesso ao questionário de
+            saúde para preencher, e todo seu atendimento será de forma 100%
+            online. Após preencher o questionário irá receber todo seu material
+            de acordo com o módulo que escolheu dentro de 5 dias úteis.
+          </li>
         </ul>
       </div>
 
-      <div class="self-center mt-16 text-xl font-semibold">
-        <p>Consultoria Online - Plano Bimestral</p>
-        <p>Valor x12</p>
-        <p>Total 6546</p>
-      </div>
-      <div class="self-center place-self-start w-2/6 tracking-wide">
-        <button
-          class="
-            w-full
-            my-8
-            block
-            text-base
-            font-semibold
-            text-cor-1
-            bg-transparent
-            border-2 border-cor-1
-            rounded-md
-            text-center
-            p-3
-            hover:text-white hover:bg-cor-1 hover:border-primary
-            transition
-          "
-        >
-          Confirmar compra
-        </button>
-        <p class="text-red-600 font-semibold">Politica de desistência:</p>
-
-        <p>
-          A consultoria engloba sua VAGA, análise das suas informações enviadas
-          pela anamnese, avaliação, prescrição do treino e acompanhamento pelo
-          canal de dúvidas. O prazo de desistência é de 7 dias da compra do
-          serviço, antes do registro do seu login.Ao enviar seu cadastro e ter
-          seu login aprovado não há mais possibilidade de devolução do valor do
-          plano visto que suas informações já estão sendo analisadas e seu
-          planejamento de treino sendo feito. Não reembolsamos planos
-          trimestrais, semestrais e anuais se você desistir ao longo da
-          consultoria, porque ao enviar suas informações toda sua periodização
-          já é montada. Não se trata de um produto novo a cada mês, logo o plano
-          a longo prazo tem o mesmo prazo de desistência de 7 dias. Não
-          reembolsamos treinos onde o cliente não gostou da prescrição, todos os
-          treinos são pensados para sua necessidade atual e propriedade técnica
-          envolvida, logo não está disponível para concordância ou não do
-          cliente sobre o que foi prescrito
-        </p>
+      <div id="regras-compra" class="w-1/2">
+        <div class="w-full">
+          <div
+            id="ajusta-dados"
+            class="font-semibold text-xl text-center uppercase pb-5"
+          >
+            <p>Consultoria Online</p>
+            <p>Plano {{ $route.params.produto }}</p>
+            <p>Valor total do produto R${{ $route.params.valor }}</p>
+            <small>Equivalente a R${{ $route.params.valorMes }}/mês</small>
+          </div>
+          <button
+           
+            class="
+              block
+              mt-20
+              mb-20
+              m-auto
+              text-base
+              font-semibold
+              border-4 border-cor-2
+              rounded-md
+              text-center
+              py-5
+              px-20
+              relative
+              group
+              bg-cor-4
+              before:absolute
+              before:inset-0
+              before:bg-cor-2
+              before:scale-x-0
+              before:origin-right
+              before:transition
+              before:duration-300
+              hover:before:scale-x-100 hover:before:origin-left
+            "
+          >
+            <span class="relative uppercase text-base">Confirmar compra</span>
+          </button>
+        </div>
+        <div class="tracking-wide w-4/5 text-base m-auto">
+          <p class="text-red-600 font-semibold">Politica de desistência:</p>
+          <p>
+            A consultoria engloba sua VAGA, análise das suas informações
+            enviadas pela anamnese, avaliação, prescrição do treino e
+            acompanhamento pelo canal de dúvidas. O prazo de desistência é de 7
+            dias da compra do serviço, antes do registro do seu login.Ao enviar
+            seu cadastro e ter seu login aprovado não há mais possibilidade de
+            devolução do valor do plano visto que suas informações já estão
+            sendo analisadas e seu planejamento de treino sendo feito. Não
+            reembolsamos planos trimestrais, semestrais e anuais se você
+            desistir ao longo da consultoria, porque ao enviar suas informações
+            toda sua periodização já é montada. Não se trata de um produto novo
+            a cada mês, logo o plano a longo prazo tem o mesmo prazo de
+            desistência de 7 dias. Não reembolsamos treinos onde o cliente não
+            gostou da prescrição, todos os treinos são pensados para sua
+            necessidade atual e propriedade técnica envolvida, logo não está
+            disponível para concordância ou não do cliente sobre o que foi
+            prescrito
+          </p>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+ data() {
+    return {
+      valorO: 0,
+      valorTotal: 0,
+      produtoSelecionado: "",
+    };
+  },
+  methods: {},
+  mounted() {
+    this.valorO = $route.params.valorMes;
+    this.valorTotal = $route.params.valor;
+    this.produtoSelecionado = $route.params.produto;
+  },
+  created() {
+    window.scrollTo(0, 0);
+  },
+};
 </script>
 
 
 <style>
-@media (max-width: 1040px) {
-  
+@media (max-width: 1070px) {
 }
 </style>

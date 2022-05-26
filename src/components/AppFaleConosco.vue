@@ -5,10 +5,11 @@
       class="
         w-full
         mx-auto
-        bg-contato-banner bg-center bg-no-repeat bg-cover
         p-10
+        bg-contato-banner bg-center bg-no-repeat bg-cover
       "
     >
+    
       <div class="container">
         <p id="text-fale-conosco" class="text-white text-5xl">
           Alguma dúvida? Estamos aqui! Entre em contato conosco!

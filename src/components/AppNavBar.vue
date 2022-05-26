@@ -16,13 +16,14 @@
                 <a
                   href="#home"
                   class="
+                    anim-btn-nav
                     tracking-widest
                     p-3
+                    pb-2
                     text-center
                     font-firasans font-semibold
-                    hover:bg-cor-1
+                    hover:text-cor-1
                     rounded-md
-                    hover:text-white
                     cursor-pointer
                   "
                   >Home</a
@@ -32,13 +33,14 @@
                 <a
                   href="#planos"
                   class="
+                    anim-btn-nav
                     tracking-widest
                     p-3
+                    pb-2
                     text-center
                     font-firasans font-semibold
-                    hover:bg-cor-1
+                    hover:text-cor-1
                     rounded-md
-                    hover:text-white
                     cursor-pointer
                   "
                   >Planos</a
@@ -48,13 +50,14 @@
                 <a
                   href="#bio"
                   class="
+                    anim-btn-nav
                     tracking-widest
                     p-3
+                    pb-2
                     text-center
                     font-firasans font-semibold
-                    hover:bg-cor-1
+                    hover:text-cor-1
                     rounded-md
-                    hover:text-white
                     cursor-pointer
                   "
                   >Bio</a
@@ -64,13 +67,14 @@
                 <a
                   href="#alunos"
                   class="
+                    anim-btn-nav
                     tracking-widest
                     p-3
+                    pb-2
                     text-center
                     font-firasans font-semibold
-                    hover:bg-cor-1
+                    hover:text-cor-1
                     rounded-md
-                    hover:text-white
                     cursor-pointer
                   "
                   >Alunos</a
@@ -80,23 +84,21 @@
                 <a
                   href="#contato"
                   class="
+                    anim-btn-nav
                     tracking-widest
                     p-3
+                    pb-2
                     text-center
                     font-firasans font-semibold
-                    hover:bg-cor-1
+                    hover:text-cor-1
                     rounded-md
-                    hover:text-white
                     cursor-pointer
                   "
                   >Contato</a
                 >
               </li>
             </ul>
-            <button
-              @click="ativaMenu()"
-              class="flex py-2 px-4 text-xl items-center"
-            >
+            <button @click="ativaMenu()" class="flex py-2 px-4 text-xl items-center">
               Menu&nbsp;
               <span id="mobile-menu"></span>
             </button>
@@ -119,8 +121,8 @@ export default {
 </script>
 
 <style>
-.header{
-  padding-top:60px;
+.header {
+  padding-top: 120px;
 }
 .menu-bar {
   position: absolute;
@@ -133,7 +135,22 @@ export default {
   background-color: #fff;
 }
 
-
+.anim-btn-nav {
+  position: relative;
+}
+.anim-btn-nav::after {
+  content: " ";
+  width: 0%;
+  height: 4px;
+  background-color: #a4cc37;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 0.3s ease-in-out;
+}
+.anim-btn-nav:hover::after {
+  width: 100%;
+}
 
 #menu-fixo.fixed {
   z-index: 10;
@@ -222,8 +239,8 @@ export default {
     width: 100%;
   }
 }
-@media(min-width: 1200px){
-  #menu-fixo.fixed{
+@media (min-width: 1200px) {
+  #menu-fixo.fixed {
     width: 60%;
   }
 }

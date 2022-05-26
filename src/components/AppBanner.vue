@@ -85,7 +85,7 @@ export default {};
 
 picture {
   overflow: hidden;
-  max-height: 500px;
+  max-height: 600px;
   display: block;
 }
 #whats-banner, #insta-banner{

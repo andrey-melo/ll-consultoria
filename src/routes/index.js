@@ -5,8 +5,8 @@ import AppCpresencial from '../pages/AppCpresencial.vue';
 
 
 export default [
-    { path: "/", component: AppHome },
-    { path: "/consultoriapresencial", component: AppCpresencial },
-    { path: "/consultoriaonline", component: AppConline },
+    { path: "/", component: AppHome, name: "home" },
+    { path: "/consultoriapresencial", component: AppCpresencial, name: "consultoriapresencial" },
+    { path: "/consultoriaonline", component: AppConline, name: "consultoriaonline" },
 
 ]

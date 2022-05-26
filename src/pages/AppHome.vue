@@ -1,7 +1,7 @@
 <template>
   <app-nav-bar></app-nav-bar>
-  <app-banner ></app-banner>
-    
+  <app-banner></app-banner>
+
   <app-planos></app-planos>
 
   <app-bio id="bio"></app-bio>
@@ -19,18 +19,19 @@ import AppBio from "../components/AppBio.vue";
 import AppAlunos from "../components/AppAlunos.vue";
 import AppFaleConosco from "../components/AppFaleConosco.vue";
 
+
 export default {
-    components:{
-        AppNavBar,
-        AppBanner,
-        AppPlanos,
-        AppBio,
-        AppAlunos,
-        AppFaleConosco
-    }
-}
+  components: {
+    AppNavBar,
+    AppBanner,
+    AppPlanos,
+    AppBio,
+    AppAlunos,
+    AppFaleConosco,
+  },
+  mounted() {},
+};
 </script>
 
 <style>
-
 </style>
