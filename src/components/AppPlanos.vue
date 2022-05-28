@@ -80,25 +80,25 @@
                   Anual - Treino ou Dieta
                 </option>
                </select>
-               <button
-               @click="compraPresencial()"
-                  class="
-                  w-full
-                  block
-                  text-base
-                  font-semibold
-                  text-cor-1
-                  bg-transparent
-                  border-2 border-cor-1
-                  rounded-md
-                  text-center
-                  p-4
-                  hover:text-white hover:bg-cor-1 hover:border-primary
-                  transition
-                  "
-                  >
-                  Saber mais!
-               </button>
+                 <button
+                  @click="compraPresencial()"
+                    class="
+                    w-full
+                    block
+                    text-base
+                    font-semibold
+                    text-cor-1
+                    bg-transparent
+                    border-2 border-cor-1
+                    rounded-md
+                    text-center
+                    p-4
+                    hover:text-white hover:bg-cor-1 hover:border-primary
+                    transition
+                    "
+                    >
+                    Saber mais!
+                 </button>
             </div>
          
              <div
@@ -218,18 +218,20 @@ export default {
       valorOnline: 0,
       valorTotalP: 0,
       valorTotalO: 0,
-      produtoOnline: "",
-      produtoPresencial: "",
+      produtoOnline: "Selecionar",
+      produtoPresencial: "Selecionar",
+      validaOption: false,
   
     };
   },
   methods: {
     mudarPlanoPresencial() {
-     const elementoPresencial = document.querySelector("#selectPresencial");
+      const elementoPresencial = document.querySelector("#selectPresencial");
       if (elementoPresencial.value == "Selecionar") {
         this.valorPresencial = 0;
         this.valorTotalP = 0;
         this.produtoPresencial = elementoPresencial.value;
+        this.validaOption= true;
       }
       if (elementoPresencial.value == "Mensal") {
         this.valorPresencial = 350;
@@ -341,14 +343,17 @@ export default {
       }
     },
     compraPresencial() {
-      const presencial = document.querySelectorAll(".presencial-value")
-      if(presencial.value == "Selecionar"){
-        console.log("Não!!!!!!!!")
+      if(this.produtoPresencial == "Selecionar"){
+        alert("Selecione uma opção de consultoria para prosseguir!")
       }else
       this.$router.push({ name: "consultoriapresencial", params: { valor: this.valorTotalP, valorMes: this.valorPresencial.toFixed(2), produto: this.produtoPresencial}})
-      
+
     },
+    
     compraOnline(){
+      if(this.produtoOnline == "Selecionar"){
+        alert("Selecione uma opção de consultoria para prosseguir!")
+      }else
       this.$router.push({name:"consultoriaonline", params: {valor: this.valorTotalO, valorMes: this.valorOnline.toFixed(2), produto:this.produtoOnline}})
     }
   },

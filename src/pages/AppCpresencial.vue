@@ -8,6 +8,26 @@
     </h2>
   </div>
   <div class="container">
+      <router-link to="/">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          version="1.1"
+          id="Layer_1"
+          x="0px"
+          y="0px"
+          viewBox="0 0 100 100"
+          style="enable-background: new 0 0 100 100"
+          xml:space="preserve"
+          class="w-20 absolute top-20"
+        >
+          <g>
+            <path
+              d="M44.8,20.5c-1.4-0.6-3.1-0.2-4.2,1L15.2,47.6c-1.5,1.6-1.5,4,0,5.5l25.4,26.1c0.9,0.9,2,1.4,3,1.4c0.4,0,0.9-0.1,1.3-0.3   c1.3-0.5,2.1-1.8,2.1-3.4V63h34c2.2,0,4-1.8,4-4V41c0-2.2-1.8-4-4-4l-34,0V24C47,22.4,46.1,21,44.8,20.5z M81,41v18H47   c-2.2,0-4,1.8-4,4l0,13.1L18,50.4l25-25.7V37c0,2.2,1.8,4,4,4H81z" fill="#a4cc37"
+            />
+          </g>
+        </svg>
+      </router-link>
     <div
       id="ajusta-tela-confirmacao"
       class="
@@ -20,7 +40,7 @@
       "
     >
       <div
-      id="produto-presencial"
+        id="produto-presencial"
         class="
           bg-white
           rounded-xl
@@ -84,7 +104,6 @@
             <small>Equivalente a R${{ $route.params.valorMes }}/mês</small>
           </div>
           <button
-           
             class="
               block
               mt-20
